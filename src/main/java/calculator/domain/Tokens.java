@@ -14,7 +14,18 @@ public class Tokens {
         if (input.isEmpty()) {
             return List.of();
         }
+        if (input.startsWith("//")) {
+            return splitByCustomDelimiter(input);
+        }
         String[] tokens = input.split("[,:]");
+        return List.of(tokens);
+    }
+
+    private List<String> splitByCustomDelimiter(String input) {
+        char delimiter = input.charAt(2);
+        int delimiterIndex = input.indexOf("\n");
+        String numberPart = input.substring(delimiterIndex + 1);
+        String[] tokens = numberPart.split(String.valueOf(delimiter));
         return List.of(tokens);
     }
 
