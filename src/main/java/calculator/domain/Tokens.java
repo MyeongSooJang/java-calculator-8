@@ -33,5 +33,8 @@ public class Tokens {
         return values;
     }
 
+    public boolean isEmpty() {
+        return values.isEmpty();
+    }
 
 }
