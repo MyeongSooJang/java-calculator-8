@@ -34,4 +34,8 @@ public class Numbers {
         }
     }
 
+    public List<Integer> getValues() {
+        return this.values;
+    }
+
 }
