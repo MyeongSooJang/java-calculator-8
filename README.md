@@ -25,25 +25,25 @@
 
 ### 4. 숫자 검증
 
-- [ ] 분리된 문자열이 숫자로 변환 가능한지 검증한다
-- [ ] 음수가 포함되어 있으면 IllegalArgumentException 발생
+- [x] 분리된 문자열이 숫자로 변환 가능한지 검증한다
+- [x] 음수가 포함되어 있으면 IllegalArgumentException 발생
     - 예외 메시지: "음수는 입력할 수 없습니다."
 
 ### 5. 덧셈 계산
 
-- [ ] 분리된 숫자들의 합을 계산한다
+- [x] 분리된 숫자들의 합을 계산한다
     - 빈 문자열이나 null은 0으로 처리
 
 ### 6. 결과 출력
 
-- [ ] 계산된 합을 출력한다
+- [x] 계산된 합을 출력한다
     - 출력 형식: "결과 : 6"
 
 ## 예외 상황
 
-- [ ] 음수 입력 시 IllegalArgumentException
-- [ ] 숫자가 아닌 값 입력 시 IllegalArgumentException
-- [ ] 잘못된 커스텀 구분자 형식 시 IllegalArgumentException
+- [x] 음수 입력 시 IllegalArgumentException
+- [x] 숫자가 아닌 값 입력 시 IllegalArgumentException
+- [x] 잘못된 커스텀 구분자 형식 시 IllegalArgumentException
 
 ## 테스트 케이스
 
