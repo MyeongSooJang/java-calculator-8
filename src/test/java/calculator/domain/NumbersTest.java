@@ -40,7 +40,7 @@ public class NumbersTest {
 
         assertThatThrownBy(() -> new Numbers(input))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("숫자가 아닌 값이 포함되어 있습니다 : " + "ㄴ");
+                .hasMessage("숫자가 아닌 값이 포함되어 있습니다. : " + "ㄴ");
     }
 
     @Test
