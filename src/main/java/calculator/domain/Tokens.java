@@ -29,8 +29,17 @@ public class Tokens {
     }
 
     private List<String> splitByCustomDelimiter(String input) {
+        if (input.length() < 4) {
+            throw new IllegalArgumentException("커스텀 구분자 형식이 올바르지 않습니다.");
+        }
+
         char delimiter = input.charAt(CUSTOM_DELIMITER_INDEX);
         int delimiterIndex = input.indexOf("\\n");
+
+        if (delimiterIndex == -1) {
+            throw new IllegalArgumentException("커스텀 구분자 형식이 올바르지 않습니다.");
+        }
+
         String numberPart = input.substring(delimiterIndex + 2);
         String[] tokens = numberPart.split(String.valueOf(delimiter));
         return List.of(tokens);
