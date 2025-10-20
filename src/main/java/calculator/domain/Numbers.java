@@ -1,6 +1,5 @@
 package calculator.domain;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Numbers {
@@ -11,7 +10,6 @@ public class Numbers {
     }
 
     private List<Number> convertToNumbers(List<String> tokens) {
-        List<Number> numbers = new ArrayList<>();
         return tokens.stream()
                 .map(this::parseNumber)
                 .toList();
