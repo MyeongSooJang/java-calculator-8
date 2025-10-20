@@ -2,10 +2,10 @@ package calculator.domain;
 
 public class Number {
 
-    private final int NUMBER;
+    private final int number;
 
     public Number(int token) {
-        this.NUMBER = validateNegative(token);
+        this.number = validateNegative(token);
     }
 
     private int validateNegative(int token) {
@@ -16,7 +16,7 @@ public class Number {
     }
 
     public int getNumber() {
-        return NUMBER;
+        return number;
     }
 
 }
