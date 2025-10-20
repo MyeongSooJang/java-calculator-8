@@ -30,8 +30,8 @@ public class Tokens {
 
     private List<String> splitByCustomDelimiter(String input) {
         char delimiter = input.charAt(CUSTOM_DELIMITER_INDEX);
-        int delimiterIndex = input.indexOf("\n");
-        String numberPart = input.substring(delimiterIndex + 1);
+        int delimiterIndex = input.indexOf("\\n");
+        String numberPart = input.substring(delimiterIndex + 2);
         String[] tokens = numberPart.split(String.valueOf(delimiter));
         return List.of(tokens);
     }
