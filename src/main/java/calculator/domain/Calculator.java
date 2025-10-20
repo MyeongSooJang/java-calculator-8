@@ -2,17 +2,11 @@ package calculator.domain;
 
 public class Calculator {
 
-    private final Numbers numbers;
-
-    public Calculator(Numbers numbers) {
-        this.numbers = numbers;
-    }
-
-    public int calculate() {
-        int sum = 0;
-        for (int number : numbers.getValues()) {
-            sum += number;
-        }
-        return sum;
+    public int calculate(String input) {
+        InputString inputString = new InputString(input);
+        Tokens tokens = new Tokens(inputString.getValue());
+        Numbers numbers = new Numbers(tokens.getValues());
+        return numbers.sum();
     }
 }
+
