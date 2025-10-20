@@ -59,7 +59,7 @@ public class TokensTest {
     @Test
     @DisplayName("커스텀 구분자로 문자열을 분리한다.")
     void makeTokensByCustomDelimiter() {
-        String input = "//;\n1;2;3";
+        String input = "//;\\n1;2;3";
 
         Tokens tokens = new Tokens(input);
 
