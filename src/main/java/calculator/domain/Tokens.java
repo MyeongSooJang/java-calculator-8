@@ -4,6 +4,9 @@ import java.util.List;
 
 public class Tokens {
 
+    private static final String CUSTOM_DELIMITER_PREFIX = "//";
+    private static final int CUSTOM_DELIMITER_INDEX = 2;
+
     private final List<String> values;
 
     public Tokens(String input) {
@@ -14,7 +17,7 @@ public class Tokens {
         if (input.isEmpty()) {
             return List.of();
         }
-        if (input.startsWith("//")) {
+        if (input.startsWith(CUSTOM_DELIMITER_PREFIX)) {
             return splitByCustomDelimiter(input);
         }
         return splitByOriginalDelimiter(input);
@@ -26,7 +29,7 @@ public class Tokens {
     }
 
     private List<String> splitByCustomDelimiter(String input) {
-        char delimiter = input.charAt(2);
+        char delimiter = input.charAt(CUSTOM_DELIMITER_INDEX);
         int delimiterIndex = input.indexOf("\n");
         String numberPart = input.substring(delimiterIndex + 1);
         String[] tokens = numberPart.split(String.valueOf(delimiter));
