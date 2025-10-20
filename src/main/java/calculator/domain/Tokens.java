@@ -7,16 +7,20 @@ public class Tokens {
     private final List<String> values;
 
     public Tokens(String input) {
-        this.values = split(input);
+        this.values = makeTokens(input);
     }
 
-    private List<String> split(String input) {
+    private List<String> makeTokens(String input) {
         if (input.isEmpty()) {
             return List.of();
         }
         if (input.startsWith("//")) {
             return splitByCustomDelimiter(input);
         }
+        return splitByOriginalDelimiter(input);
+    }
+
+    private List<String> splitByOriginalDelimiter(String input) {
         String[] tokens = input.split("[,:]");
         return List.of(tokens);
     }
