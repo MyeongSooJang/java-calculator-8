@@ -50,7 +50,7 @@ public class NumbersTest {
 
         assertThatThrownBy(() -> new Numbers(input))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining("음수는 입력이 불가능합니다.");
+                .hasMessageContaining("음수는 입력할 수 없습니다.");
     }
 
     @Test
