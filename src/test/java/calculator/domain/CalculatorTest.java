@@ -60,7 +60,7 @@ public class CalculatorTest {
     @Test
     @DisplayName("커스텀 구분자로 구분된 숫자들의 합을 계산한다.")
     void calculateWithCustomDelimiter() {
-        String input = "//;\n1;2;3";
+        String input = "//;\\n1;2;3";
 
         Calculator calculator = new Calculator();
 
