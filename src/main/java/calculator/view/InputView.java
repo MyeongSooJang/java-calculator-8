@@ -7,6 +7,12 @@ public class InputView {
 
     public String readInput() {
         System.out.println(INPUT_MESSAGE);
-        return Console.readLine();
+        String line = Console.readLine();
+
+        if (line.startsWith("//")) {
+            String nextLine = Console.readLine();
+            return line + "\n" + nextLine;
+        }
+        return line;
     }
 }
