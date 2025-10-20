@@ -28,7 +28,7 @@ public class TokensTest {
 
     @Test
     @DisplayName("콜론을 구분자로 문자열을 분리한다.")
-    void splitByColon() {
+    void makeTokensByColon() {
         String input = "1:2:3";
 
         Tokens tokens = new Tokens(input);
@@ -38,7 +38,7 @@ public class TokensTest {
 
     @Test
     @DisplayName("쉼표를 구분자로 문자열을 분리한다.")
-    void splitByComma() {
+    void makeTokensByComma() {
         String input = "1,2";
 
         Tokens tokens = new Tokens(input);
@@ -48,7 +48,7 @@ public class TokensTest {
 
     @Test
     @DisplayName("쉼표와 콜론을 구분자로 문자열을 분리한다.")
-    void splitByCommaAndColon() {
+    void makeTokensByCommaAndColon() {
         String input = "1,2:3";
 
         Tokens tokens = new Tokens(input);
@@ -58,7 +58,7 @@ public class TokensTest {
 
     @Test
     @DisplayName("커스텀 구분자로 문자열을 분리한다.")
-    void splitByCustomDelimiter() {
+    void makeTokensByCustomDelimiter() {
         String input = "//;\n1;2;3";
 
         Tokens tokens = new Tokens(input);
