@@ -28,11 +28,9 @@ public class Numbers {
     }
 
     public int sum() {
-        int sum = 0;
-        for (Number number : values) {
-            sum += number.getNumber();
-        }
-        return sum;
+        return values.stream()
+                .mapToInt(Number::getNumber)
+                .sum();
     }
 
     public List<Number> getValues() {
