@@ -28,7 +28,7 @@ public class CalculatorTest {
     }
 
     @Test
-    @DisplayName("콤마를 구분자로 들어온 경우, 각각 숫자로 나누뒨 숫자들의 총합을 계산한다.")
+    @DisplayName("콤마를 구분자로 들어온 경우, 각각 숫자로 나눈 숫자들의 총합을 계산한다.")
     void calculateMultipleWithComma() {
         String input = "1,2,3";
 
