@@ -12,11 +12,9 @@ public class Numbers {
 
     private List<Number> convertToNumbers(List<String> tokens) {
         List<Number> numbers = new ArrayList<>();
-        for (String token : tokens) {
-            Number number = parseNumber(token);
-            numbers.add(number);
-        }
-        return numbers;
+        return tokens.stream()
+                .map(this::parseNumber)
+                .toList();
     }
 
     private Number parseNumber(String token) {
